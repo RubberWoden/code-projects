@@ -1,0 +1,721 @@
+/*----------------- Main Layout ------------------*/
+
+/* A CSS Grid example using "grid-template-areas"
+  https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas
+*/
+
+main {
+  display: grid;
+  row-gap: 5px;
+  grid-template-areas:  "AA"
+                        "AB"
+                        "AC"
+                        "AD";
+}
+                                
+input {
+  text-align: center;
+}
+
+.header {
+  grid-area: AA;
+  background-color: coral;
+  text-align: center;
+  vertical-align: text-bottom;
+  height: 80px;
+}
+
+.details {
+  margin: 0px;
+  padding: 0px;
+  grid-area: AB;
+  background-color: coral;
+  text-align: center;
+  vertical-align: text-bottom;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:  "ZZ ZZ ZZ ZZ ZZ ZZ ZZ ZZ ZZ ZZ ZZ ZZ"
+                        "BA BA BA BA BB BB BB BB BC BC BC BC"
+                        "BD BD BD BE BE BE BF BF BF BG BG BG";
+}
+
+.headerdetail {
+    grid-area: ZZ;
+    text-align: center;
+    height: 30px;
+    background-color: aqua;
+}
+
+.detailbox {
+  margin: 1px;
+  padding: 5px;
+  margin-top: -1px;
+}
+
+.species {
+  grid-area: BA;
+  text-align: center;
+  background-color: rgb(56, 145, 65);
+}
+
+.occupation {
+  grid-area: BB;
+  text-align: center;
+  background-color: rgb(172, 125, 248);
+}
+
+.home {
+  grid-area: BC;
+  text-align: center;
+  background-color: rgb(69, 176, 219);
+}
+
+.size {
+  grid-area: BD;
+  text-align: center;
+  background-color: rgb(226, 218, 167);
+}
+
+.height {
+  grid-area: BE;
+  text-align: center;
+  background-color: rgb(120, 137, 21);
+}
+
+.weight {
+  grid-area: BF;
+  text-align: center;
+  background-color: rgb(184, 103, 103);
+}
+
+.gender {
+  grid-area: BG;
+  text-align: center;
+  background-color: rgb(125, 14, 119);
+}
+
+.stats {
+  margin: 0px;
+  padding: 0px;
+  grid-area: AC;
+  background-color: coral;
+  text-align: center;
+  vertical-align: text-bottom;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:  "CA CA CA CA CA CA CA CA CA CA CA CA"
+                        "CB CB CB CB CC CC CC CC CD CD CD CD"
+                        "CE CE CE CE CF CF CF CF CG CG CG CG"
+                        "CH CH CH CI CI CI CJ CJ CJ CK CK CK";
+}
+
+.headerstats {
+  grid-area: CA;
+  text-align: center;
+  height: 30px;
+  background-color: aqua;
+}
+
+.statbox {
+  margin: 1px;
+  padding: 5px;
+  margin-top: -1px;
+}
+
+.body {
+  grid-area: CB;
+  text-align: center;
+  background-color: rgb(103, 165, 192);
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:  "DA DA DA"
+                        "DB DC DD"
+                        "DE DF DG";
+}
+
+.bodyheader {
+  grid-area: DA;
+}
+
+.bodylabelbase {
+  grid-area: DB;
+}
+
+.bodylabelmodifier {
+  grid-area: DC;
+}
+
+.bodylabeltotal {
+  grid-area: DD;
+}
+
+#bodybaseinput {
+  grid-area: DE;
+  background-color: rgb(196, 155, 235);
+}
+
+#bodymodifierinput {
+  grid-area: DF;
+  background-color: aqua;
+}
+
+.bodyspantotal {
+  grid-area: DG;
+}
+
+.mind {
+  grid-area: CC;
+  text-align: center;
+  background-color: rgb(103, 165, 192);
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:  "EA EA EA"
+                        "EB EC ED"
+                        "EE EF EG";
+}
+
+.mindheader {
+  grid-area: EA;
+}
+
+.mindlabelbase {
+  grid-area: EB;
+  text-align: center;
+}
+
+.mindlabelmodifier {
+  grid-area: EC;
+  text-align: center;
+}
+
+.mindlabeltotal {
+  grid-area: ED;
+  text-align: center;
+}
+
+.minEBaseinput {
+  grid-area: EE;
+  text-align: center;
+}
+
+.mindmodifierinput {
+  grid-area: EF;
+  text-align: center;
+}
+
+.mindspantotal {
+  grid-area: EG;
+  text-align: center;
+}
+
+.soul {
+  grid-area: CD;
+  text-align: center;
+  background-color: rgb(103, 165, 192);
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:  "FA FA FA"
+                        "FB FC FD"
+                        "FE FF FG";
+}
+
+.soulheader {
+  grid-area: FA;
+  text-align: center;
+}
+
+.soullabelbase {
+  grid-area: FB;
+  text-align: center;
+}
+
+.soullabelmodifier {
+  grid-area: FC;
+  text-align: center;
+}
+
+.soullabeltotal {
+  grid-area: FD;
+  text-align: center;
+}
+
+.soulbaseinput {
+  grid-area: FE;
+  text-align: center;
+}
+
+.soulmodifierinput {
+  grid-area: FF;
+  text-align: center;
+}
+
+.soulspantotal {
+  grid-area: FG;
+  text-align: center;
+}
+
+.enpo {
+  grid-area: CE;
+  text-align: center;
+  background-color: rgb(5, 94, 247);
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:  "GA GA GA"
+                        "GB GC GD"
+                        "GE GF GG"
+                        "GH GI GJ"
+                        "GK GL GM";
+}
+
+.enpoheader {
+  grid-area: GA;
+  text-align: center;
+}
+
+.enpolabelbase {
+  grid-area: GB;
+  text-align: center;
+}
+
+.enpolabelmodifier {
+  grid-area: GC;
+  text-align: center;
+}
+
+.enpolabeltotal {
+  grid-area: GD;
+  text-align: center;
+}
+
+.enpobaseinput {
+  grid-area: GE;
+  text-align: center;
+}
+
+.enpomodifierinput {
+  grid-area: GF;
+  text-align: center;
+}
+
+.enpospantotal {
+  grid-area: GG;
+  text-align: center;
+}
+
+.enpolabeldamage {
+  grid-area: GH;
+  text-align: center;
+}
+
+.enpolabelused {
+  grid-area: GI;
+  text-align: center;
+}
+
+.enpolabelremaining {
+  grid-area: GJ;
+  text-align: center;
+}
+
+.enpodamageinput {
+  grid-area: GK;
+  text-align: center;
+}
+
+.enpousedinput {
+  grid-area: GL;
+  text-align: center;
+}
+
+.enpospanremaining {
+  grid-area: GM;
+  text-align: center;
+}
+
+.hepo {
+  grid-area: CF;
+  text-align: center;
+  background-color: rgb(253, 116, 144);
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:  "HA HA HA"
+                        "HB HC HD"
+                        "HE HF HG"
+                        "HH HI HJ"
+                        "HK HL HM";
+}
+
+.hepoheader {
+  grid-area: HA;
+  text-align: center;
+}
+
+.hepolabelbase {
+  grid-area: HB;
+  text-align: center;
+}
+
+.hepolabelmodifier {
+  grid-area: HC;
+  text-align: center;
+}
+
+.hepolabeltotal {
+  grid-area: HD;
+  text-align: center;
+}
+
+.hepobaseinput {
+  grid-area: HE;
+  text-align: center;
+}
+
+.hepomodifierinput {
+  grid-area: HF;
+  text-align: center;
+}
+
+.hepospantotal {
+  grid-area: HG;
+  text-align: center;
+}
+
+.hepolabeldamage {
+  grid-area: HH;
+  text-align: center;
+}
+
+.hepolabelused {
+  grid-area: HI;
+  text-align: center;
+}
+
+.hepolabelremaining {
+  grid-area: HJ;
+  text-align: center;
+}
+
+.hepodamageinput {
+  grid-area: HK;
+  text-align: center;
+}
+
+.hepousedinput {
+  grid-area: HL;
+  text-align: center;
+}
+
+.hepospanremaining {
+  grid-area: HM;
+  text-align: center;
+}
+
+.sopo {
+  grid-area: CG;
+  text-align: center;
+  background-color: rgb(102, 77, 125);
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:  "IA IA IA IA IA IA"
+                        "IB IB IC IC ID ID"
+                        "IE IE IF IF IG IG"
+                        "IH IH IH II II II"
+                        "IJ IJ IJ IK IK IK";
+}
+
+.sopoheader {
+  grid-area: IA;
+  text-align: center;
+}
+
+.sopolabelbase {
+  grid-area: IB;
+  text-align: center;
+}
+
+.sopolabelmodifier {
+  grid-area: IC;
+  text-align: center;
+}
+
+.sopolabeltotal {
+  grid-area: ID;
+  text-align: center;
+}
+
+.sopobaseinput {
+  grid-area: IE;
+  text-align: center;
+}
+
+.sopomodifierinput {
+  grid-area: IF;
+  text-align: center;
+}
+
+.sopospantotal {
+  grid-area: IG;
+  text-align: center;
+}
+
+.sopolabeldamage {
+  grid-area: IH;
+  text-align: center;
+}
+
+.sopolabelremaining {
+  grid-area: II;
+  text-align: center;
+}
+
+.sopodamageinput {
+  grid-area: IJ;
+  text-align: center;
+}
+
+.sopospanremaining {
+  grid-area: IK;
+  text-align: center;
+}
+
+.damu {
+  grid-area: CH;
+  text-align: center;
+  background-color: rgb(189, 167, 120);
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:  "JA JA JA"
+                        "JB JC JD"
+                        "JE JF JG";
+}
+
+.damuheader {
+  grid-area: JA;
+  text-align: center;
+}
+
+.damulabelbase {
+  grid-area: JB;
+  text-align: center;
+}
+
+.damulabelmodifier {
+  grid-area: JC;
+  text-align: center;
+}
+
+.damulabeltotal {
+  grid-area: JD;
+  text-align: center;
+}
+
+.damubaseinput {
+  grid-area: JE;
+  text-align: center;
+}
+
+.damumodifierinput {
+  grid-area: JF;
+  text-align: center;
+}
+
+.damuspantotal {
+  grid-area: JG;
+  text-align: center;
+}
+
+.covaat {
+  grid-area: CI;
+  text-align: center;
+  background-color: rgb(220, 77, 41);
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:  "KA KA KA"
+                        "KB KC KD"
+                        "KE KF KG";
+}
+
+.covaatheader {
+  grid-area: KA;
+  text-align: center;
+}
+
+.covaatlabelbase {
+  grid-area: KB;
+  text-align: center;
+}
+
+.covaatlabelmodifier {
+  grid-area: KC;
+  text-align: center;
+}
+
+.covaatlabeltotal {
+  grid-area: KD;
+  text-align: center;
+}
+
+.covaatbaseinput {
+  grid-area: KE;
+  text-align: center;
+}
+
+.covaatmodifierinput {
+  grid-area: KF;
+  text-align: center;
+}
+
+.covaatspantotal {
+  grid-area: KG;
+  text-align: center;
+}
+
+.covade {
+  grid-area: CJ;
+  text-align: center;
+  background-color: rgb(74, 94, 85);
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:  "LA LA LA"
+                        "LB LC LD"
+                        "LE LF LG";
+}
+
+.covadeheader {
+  grid-area: LA;
+  text-align: center;
+}
+
+.covadelabelbase {
+  grid-area: LB;
+  text-align: center;
+}
+
+.covadelabelmodifier {
+  grid-area: LC;
+  text-align: center;
+}
+
+.covadelabeltotal {
+  grid-area: LD;
+  text-align: center;
+}
+
+.covadebaseinput {
+  grid-area: LE;
+  text-align: center;
+}
+
+.covademodifierinput {
+  grid-area: LF;
+  text-align: center;
+}
+
+.covadespantotal {
+  grid-area: LG;
+  text-align: center;
+}
+
+.socova {
+  grid-area: CK;
+  text-align: center;
+  background-color: rgb(255, 0, 0);
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:  "MA MA MA"
+                        "MB MC MD"
+                        "ME MF MG";
+}
+
+.socovaheader {
+  grid-area: MA;
+  text-align: center;
+}
+
+.socovalabelbase {
+  grid-area: MB;
+  text-align: center;
+}
+
+.socovalabelmodifier {
+  grid-area: MC;
+  text-align: center;
+}
+
+.socovalabeltotal {
+  grid-area: MD;
+  text-align: center;
+}
+
+.socovabaseinput {
+  grid-area: ME;
+  text-align: center;
+}
+
+.socovamodifierinput {
+  grid-area: MF;
+  text-align: center;
+}
+
+.socovaspantotal {
+  grid-area: MG;
+  text-align: center;
+}
+
+.characterpoints {
+  grid-area: AD;
+  text-align: center;
+  background-color: rgb(0, 199, 70);
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:  "NA NA NA NA"
+                        "NB NC ND NE"
+                        "NF NG NH NI";
+}
+
+.cpheader {
+  grid-area: NA;
+  text-align: center;
+}
+
+.cpcreationlabel {
+  grid-area: NB;
+  text-align: center;
+}
+
+.cpgained {
+  grid-area: NC;
+  text-align: center;
+}
+
+.cpused {
+  grid-area: ND;
+  text-align: center;
+}
+
+.cpremaining {
+  grid-area: NE;
+  text-align: center;
+}
+
+.cpcreationinput {
+  grid-area: NF;
+  text-align: center;
+}
+
+.cpgainedinput {
+  grid-area: NG;
+  text-align: center;
+}
+
+.cpusedinput {
+  grid-area: NH;
+  text-align: center;
+}
+
+.cpremainingspan {
+  grid-area: NI;
+  text-align: center;
+}
+
+
