@@ -1,190 +1,54 @@
-<!--
-Main body
--->
-<main>
-    <!--Header-->
-    <div class="header f-center">
-        <span>Version 1.0.0</span><br>
-        <span>Professor Waifu's BESM 4e Character Sheet</span>
-        <h1><input name="attr_character_name" type="text" placeholder="CHARACTER NAME"></h1>
-    </div>
-    <!--Character Details-->
-    <div class="details">
-        <h3 class="headerdetail">Details</h3>
-        <div class="species detailbox">
-            <h4>Species/Subspecies</h4>
-            <input name="attr_species" type="text" class="detailboxfirst">
-        </div>
-        <div class="occupation detailbox">
-            <h4>Class/Occupation</h4>
-            <input name="attr_occupation" type="text" class="detailboxfirst">
-        </div>
-        <div class="home detailbox">
-            <h4>Home</h4>
-            <input name="attr_home" type="text" class="detailboxfirst">
-        </div>
-        <div class="size detailbox">
-            <h4>Size</h4>
-            <input name="attr_size" type="text" style="width: 50%;">
-        </div>
-        <div class="height detailbox">
-            <h4>Height</h4>
-            <input name="attr_height" type="text" style="width: 50%;">
-        </div>
-        <div class="weight detailbox">
-            <h4>Weight</h4>
-            <input name="attr_weight" type="text" style="width: 50%;">
-        </div>
-        <div class="gender detailbox">
-            <h4>Gender</h4>
-            <input name="attr_gender" type="text" style="width: 50%;">
-        </div>
-    </div>
-    <!--Stats-->
-    <div class="stats">
-        <h3 class="headerstats">Stats</h3>
-        <div class="body statbox">
-            <h4 class="bodyheader">Body</h4>
-            <span class="bodylabelbase">Base</span>
-            <input id="bodybaseinput" name="attr_bodybase" type="number">
-            <span class="bodylabelmodifier">Modifier</span>
-            <input id="bodymodifierinput" name="attr_bodymodifier" type="number">
-            <span class="bodylabeltotal" >Total</span>
-            <input class="bodyspantotal" name="attr_bodytotal" type="number" readonly>
-        </div>
-        <div class="mind statbox">
-            <h4 class="mindheader">Mind</h4>
-            <span class="mindlabelbase">Base</span>
-            <input class="mindbaseinput" name="attr_mindbase" type="number">
-            <span class="mindlabelmodifier">Modifier</span>
-            <input class="mindmodifierinput" name="attr_mindmodifier" type="number">
-            <span class="mindlabeltotal">Total</span>
-            <span class="mindspantotal" name="attr_mindtotal"></span>
-        </div>
-        <div class="soul statbox">
-            <h4 class="soulheader">Soul</h4>
-            <span class="soullabelbase">Base</span>
-            <input class="soulbaseinput" name="attr_soulbase" type="number">
-            <span class="soullabelmodifier">Modifier</span>
-            <input class="soulmodifierinput" name="attr_soulmodifier" type="number">
-            <span class="soullabeltotal">Total</span>
-            <span class="soulspantotal" name="attr_soultotal"></span>
-        </div>
-        <div class="enpo statbox">
-            <h4 class="enpoheader">Energy Points</h4>
-            <span class="enpobaselabel">Base</span>
-            <span class="enpospanbase" name="attr_enpobase"></span>
-            <span class="enpolabelmodifier">Modifier</span>
-            <input class="enpomodifierinput" name="attr_enpomodifier" type="number">
-            <span class="enpolabeltotal">Total</span>
-            <span class="enpospantotal" name="attr_enpototal"></span>
-            <span class="enpolabeldamage">Damage</span>
-            <input class="enpodamageinput" name="attr_enpodamage" type="number">
-            <span class="enpolabelused">Used</span>
-            <input class="enpousedinput" name="attr_enpoused" type="number">
-            <span class="enpolabelremaining">Remaining</span>
-            <span class="enpospanremaining" name="attr_enporemaining"></span>
-        </div>
-        <div class="hepo statbox">
-            <h4 class="hepoheader">Health Points</h4>
-            <span class="hepobaselabel">Base</span>
-            <span class="hepospanbase" name="attr_hepobase"></span>
-            <span class="hepolabelmodifier">Modifier</span>
-            <input class="hepomodifierinput" name="attr_hepomodifier" type="number">
-            <span class="hepolabeltotal">Total</span>
-            <span class="hepospantotal" name="attr_hepototal"></span>
-            <span class="hepolabeldamage">Damage</span>
-            <input class="hepodamageinput" name="attr_hepodamage" type="number">
-            <span class="hepolabelused">Used</span>
-            <input class="hepousedinput" name="attr_hepoused" type="number">
-            <span class="hepolabelremaining">Remaining</span>
-            <span class="hepospanremaining" name="attr_heporemaining"></span>
-        </div>
-        <div class="sopo statbox">
-            <h4 class="sopoheader">Society Points</h4>
-            <span class="sopobaselabel">Base</span>
-            <span class="sopospanbase" name="attr_sopobase"></span>
-            <span class="sopolabelmodifier">Modifier</span>
-            <input class="sopomodifierinput" name="attr_sopomodifier" type="number">
-            <span class="sopolabeltotal">Total</span>
-            <span class="sopospantotal" name="attr_sopototal"></span>
-            <span class="sopolabeldamage">Damage</span>
-            <input class="sopodamageinput" name="attr_sopodamage" type="number">
-            <span class="sopolabelremaining">Remaining</span>
-            <span class="sopospanremaining" name="attr_soporemaining"></span>
-        </div>
-        <div class="damu statbox">
-            <h4 class="damuheader">Damage Multiplier</h4>
-            <span class="damubaselabel">Base</span>
-            <span class="damuspanbase" name="attr_damubase"></span>
-            <span class="damulabelmodifier">Modifier</span>
-            <input class="damumodifierinput" name="attr_damumodifier" type="number">
-            <span class="damulabeltotal">Total</span>
-            <span class="damuspantotal" name="attr_damutotal"></span>
-        </div>
-        <div class="covaat statbox">
-            <h4 class="covaatheader">Combat Value Attack</h4>
-            <span class="covaatbaselabel">Base</span>
-            <span class="covaatspanbase" name="attr_covaatbase"></span>
-            <span class="covaatlabelmodifier">Modifier</span>
-            <input class="covaatmodifierinput" name="attr_covaatmodifier" type="number">
-            <span class="covaatlabeltotal">Total</span>
-            <span class="covaatspantotal" name="attr_covaattotal"></span>
-        </div>
-        <div class="covade statbox">
-            <h4 class="covadeheader">Combat Value Defense</h4>
-            <span class="covadebaselabel">Base</span>
-            <span class="covadespanbase" name="attr_covadebase"></span>
-            <span class="covadelabelmodifier">Modifier</span>
-            <input class="covademodifierinput" name="attr_covademodifier" type="number">
-            <span class="covadelabeltotal">Total</span>
-            <span class="covadespantotal" name="attr_covadetotal"></span>
-        </div>
-        <div class="socova statbox">
-            <h4 class="socovaheader">Social Combat Value</h4>
-            <span class="socovabaselabel">Base</span>
-            <span class="socovaspanbase" name="attr_socovabase"></span>
-            <span class="socovalabelmodifier">Modifier</span>
-            <input class="socovamodifierinput" name="attr_socovamodifier" type="number">
-            <span class="socovalabeltotal">Total</span>
-            <span class="socovaspantotal" name="attr_socovatotal"></span>
-        </div>
-    </div>
-    <!--Character Points-->
-    <div class="characterpoints">
-        <h4 class="cpheader">Character Points</h4>
-        <span class="cpcreationlabel">Character Creation</span>
-        <span class="cpgained">Gained</span>
-        <span class="cpused">Used</span>
-        <span class="cpremaining">Remaining</span>
-        <input class="cpcreationinput" name="attr_cpcreation" type="number">
-        <input class="cpgainedinput" name="attr_cpgained" type="number">
-        <input class="cpusedinput" name="attr_cpused" type="number">
-        <span class="cpremainingspan" name="attr_cpremaining"></span>
-    </div>
-    <!--Defects-->
-    <!--Attributes-->
-    <!--Notes-->
-</main>
-<!--
-Drop down menus
--->
-<datalist>
+<!--||||||||||-->
+<!--|||HTML|||-->
+<!--||||||||||-->
+<!--Main-->
+<!--Tab Buttons-->
+<input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab" value="stats" />
+<div>
+    <button type="action" name="act_stats" class="sheet-button0">Stats</button>
+    <button type="action" name="act_attributes" class="sheet-button1">Attributes</button>
+    <button type="action" name="act_defects" class="sheet-button2">Defects</button>
+</div>
+<!--//Tab Buttons-->
+<!--Stats Tab-->
+<!--Character Info-->
 
-</datalist>
-<!--
-The Unpaid Overworked Interns
--->
-<script type="text/worker">
+<!--//Character Info-->
+<!--Base Stats-->
 
-    
+<!--//Base Stats-->
+<!--Derived Stats Points-->
 
-</script>
-<!--
-How rolls show up in chat, do this last
--->
-<!--
-<rolltemplate class="sheet-rolltemplate-rolls">
+<!--//Derived Stats Points-->
+<!--Derived Stats Combat Values-->
 
-</rolltemplate>
--->
+<!--//Derived Stats Combat Values-->
+<!--Character Points-->
+
+<!--//Character Points-->
+<!--//Stats Tab-->
+<!--Attributes Tab-->
+
+<!--//Attributes Tab-->
+<!--Defects & Notes-->
+
+<!--//Defects & Notes-->
+<!--//Main-->
+<!--||||||||||||||||-->
+<!--|||Javascript|||-->
+<!--||||||||||||||||-->
+<!--Workers-->
+<!--Normal Workers-->
+
+<!--//Normal Workers-->
+<!--Tab Worker-->
+const buttonlist = ["stats", "attributes", "defects"];
+buttonlist.forEach(button => {
+    on(`clicked:${button}`, function() {
+        setAttrs({
+            sheetTab: button
+        });
+    });
+});
+<!--//Tab Worker-->
+<!--//Workers-->
