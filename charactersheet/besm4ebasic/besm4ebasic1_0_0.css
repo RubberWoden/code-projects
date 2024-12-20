@@ -1,20 +1,27 @@
-/* Tabs */
 /* configure the tab buttons */
-.charsheet .sheet-stats,
+.charsheet .sheet-character,
 .charsheet .sheet-attributes,
 .charsheet .sheet-defects {
     display: none;
 }
 
 /* style the active button */
-.charsheet .sheet-tabstoggle[value="stats"] ~ div .sheet-button0 {outline: 2px solid rgb(0, 255, 0);}
-.charsheet .sheet-tabstoggle[value="attributes"] ~ div .sheet-button1 {outline: 2px solid rgb(0, 0, 255);}
-.charsheet .sheet-tabstoggle[value="defects"] ~ div .sheet-button2 {outline: 2px solid rgb(255, 0, 0);}
+.charsheet .sheet-tabstoggle[value="character"] ~ div .sheet-button0 {outline: 2px solid rgb(6, 255, 60);}
+.charsheet .sheet-tabstoggle[value="attributes"] ~ div .sheet-button1 {outline: 2px solid rgb(0, 255, 47);}
+.charsheet .sheet-tabstoggle[value="defects"] ~ div .sheet-button2 {outline: 2px solid rgb(0, 255, 98);}
 
 /* show the selected tab */
-.charsheet .sheet-tabstoggle[value="stats"] ~ div.sheet-stats,
+.charsheet .sheet-tabstoggle[value="character"] ~ div.sheet-character,
 .charsheet .sheet-tabstoggle[value="attributes"] ~ div.sheet-attributes,
 .charsheet .sheet-tabstoggle[value="defects"] ~ div.sheet-defects {
     display: block;
 }
-/* Character Sheet */
+
+/* show and hide buttons for attribute */
+
+
+/* headers */
+h3 {
+  color: rgb(255, 255, 255);
+  background-color: black;
+}

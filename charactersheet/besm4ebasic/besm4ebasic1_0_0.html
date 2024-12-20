@@ -3,182 +3,274 @@
 <!--||||||||||-->
 <!--Main-->
 <main>
-    <!--Tab Buttons-->
-    <input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab" value="stats" />
+    <input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab" value="character" />
     <div>
-        <button type="action" name="act_stats" class="sheet-button0">Stats</button>
+        <button type="action" name="act_character" class="sheet-button0">Character</button>
         <button type="action" name="act_attributes" class="sheet-button1">Attributes</button>
         <button type="action" name="act_defects" class="sheet-button2">Defects</button>
     </div>
-
     <!--||||||||||Stats Tab||||||||||-->
-    <!--Character Info-->
-    <div class="divcharacterinfo">
-        <!--character name-->
-        <h3>Character Name</h3>
-        <input class="inputname" name="attr_character_name" type="text" placeholder="CHARACTER NAME">
-        <!--species-->
-        <h3>Species</h3>
-        <input class="inputspecies" name="attr_species" type="text" placeholder="Human">
-        <!--class or occupation-->
-        <h3>Occupation</h3>
-        <input class="inputoccupation" name="attr_class" type="text" placeholder="Internet Troll">
-        <!--home world or habitat-->
-        <h3>Home</h3>
-        <input class="inputhome" name="attr_home" type="text" placeholder="Swamp">
-        <!--size-->
-        <h3>Size</h3>
-        <input class="inputsize" name="attr_size" type="text" placeholder="Medium">
-        <!--height-->
-        <h3>Height</h3>
-        <input class="inputheight" name="attr_height" type="text" placeholder="128cm">
-        <!--weight-->
-        <h3>Weight</h3>
-        <input class="inputweight" name="attr_weight" type="text" placeholder="90kg">
-        <!--gender-->
-        <h3>Gender</h3>
-        <input class="inputgender" name="attr_gender" type="text" placeholder="Enby">
-        <!--sex-->
-        <h3>Sex</h3>
-        <input class="inputsex" name="attr_sex" type="text" placeholder="Female">
+    <div class="sheet-character">
+        <!--Character Info-->
+        <div class="divcharacterinfo">
+            <!--character name-->
+            <h3 class="characternameheader">Character Name</h3>
+            <input class="inputname" name="attr_character_name" type="text" placeholder="CHARACTER NAME">
+            <!--species-->
+            <h3 class="speciesheader">Species</h3>
+            <input class="inputspecies" name="attr_species" type="text" placeholder="Human">
+            <!--class or occupation-->
+            <h3 class="occupationheader">Occupation</h3>
+            <input class="inputoccupation" name="attr_class" type="text" placeholder="Internet Troll">
+            <!--home world or habitat-->
+            <h3 class="homeheader">Home</h3>
+            <input class="inputhome" name="attr_home" type="text" placeholder="Swamp">
+            <!--size-->
+            <h3 class="sizeheader">Size</h3>
+            <input class="inputsize" name="attr_size" type="text" placeholder="Medium">
+            <!--height-->
+            <h3 class="heightheader">Height</h3>
+            <input class="inputheight" name="attr_height" type="text" placeholder="128cm">
+            <!--weight-->
+            <h3 class="weightheader">Weight</h3>
+            <input class="inputweight" name="attr_weight" type="text" placeholder="90kg">
+            <!--gender-->
+            <h3 class="genderheader">Gender</h3>
+            <input class="inputgender" name="attr_gender" type="text" placeholder="Enby">
+            <!--sex-->
+            <h3 class="sexheader">Sex</h3>
+            <input class="inputsex" name="attr_sex" type="text" placeholder="Female">
+        </div>
+
+        <!--Base Stats-->
+        <div class="base-stats">
+            <!--body-->
+            <div class="divbody">
+                <h2 class="bodyheader">Body</h2>
+                <!--base-->
+                <h3 class="bodybaselabel label">Base</h3>
+                <input class="bodybasenum" name="attr_bodybase" type="number" value="0">
+                <!--modifier-->
+                <h3 class="bodymodifierlabel label">Modifier</h3>
+                <input class="bodymodifiernum" name="attr_bodymodifier" type="number" value="0">
+                <!--total-->
+                <h3 class="bodytotallabel label">Total</h3>
+                <span class="bodytotalnum" name="attr_bodytotal" title="@{body}"></span>
+            </div>
+            <!--mind-->
+            <div class="divmind">
+                <h2 class="mindheader">Mind</h2>
+                <!--base-->
+                <h3 class="mindbaselabel label">Base</h3>
+                <input class="mindbasenum" name="attr_mindbase" type="number" value="0">
+                <!--modifier-->
+                <h3 class="mindmodifierlabel label">Modifier</h3>
+                <input class="mindmodifiernum" name="attr_mindmodifier" type="number" value="0">
+                <!--total-->
+                <h3 class="mindtotallabel label">Total</h3>
+                <span class="mindtotalnum" name="attr_mindtotal" title="@{mind}"></span>
+            </div>
+            <!--soul-->
+            <div class="divsoul">
+                <h2 class="soulheader">Soul</h2>
+                <!--base-->
+                <h3 class="soulbaselabel label">Base</h3>
+                <input class="soulbasenum" name="attr_soulbase" type="number" value="0">
+                <!--modifier-->
+                <h3 class="soulmodifierlabel label">Modifier</h3>
+                <input class="soulmodifiernum" name="attr_soulmodifier" type="number" value="0">
+                <!--total-->
+                <h3 class="soultotallabel label">Total</h3>
+                <span class="soultotalnum" name="attr_soultotal" title="@{soul}"></span>
+            </div>
+        </div>
+
+        <!--Derived Stats Points-->
+        <div class="divderivedstats">
+            <!--Energy Points-->
+            <div class="divenergypoints">
+                <h2 class="energypointsheader">Energy Points</h2>
+                <!--base-->
+                <h3 class="energypointsbaselabel label">Base</h3>
+                <span class="energypointsbasenum" name="attr_energypointsbasenum"></span>
+                <!--modifier-->
+                <h3 class="energypointsmodifierlabel label">Modifier</h3>
+                <input class="energypointsmodifiernum" name="attr_energypointsmodifiernum" type="number" value="0">
+                <!--total-->
+                <h3 class="energypointstotallabel label">Total</h3>
+                <span class="energypointsbasenum" name="attr_energypointsbasebum"></span>
+                <!--damage-->
+                <h3 class="energypointsdamagelabel label">Damage</h3>
+                <input class="energypointsdamagenum" name="attr_energypointsdamagenum" type="number" value="0">
+                <!--used-->
+                <h3 class="energypointsusedlabel label">Used</h3>
+                <input class="energypointsusednum" name="attr_energypointsusednum" type="number" value="0">
+                <!--remaining-->
+                <h3 class="energypointsremaininglabel label">Remaining</h3>
+                <span class="energypointsbasenum" name="attr_energypointsbasebum"></span>
+            </div>
+            <!--Health Points-->
+            <div class="divhealthpoints">
+                <h2 class="healthpointsheader">Health Points</h2>
+                <!--base-->
+                <h3 class="healthpointsbaselabel label">Base</h3>
+                <span class="healthpointsbasenum" name="attr_healthpointsbasenum"></span>
+                <!--modifier-->
+                <h3 class="healthpointsmodifierlabel label">Modifier</h3>
+                <input class="healthpointsmodifiernum" name="attr_healthpointsmodifiernum" type="number" value="0">
+                <!--total-->
+                <h3 class="healthpointstotallabel label">Total</h3>
+                <span class="healthpointsbasenum" name="attr_healthpointsbasebum"></span>
+                <!--damage-->
+                <h3 class="healthpointsdamagelabel label">Damage</h3>
+                <input class="healthpointsdamagenum" name="attr_healthpointsdamagenum" type="number" value="0">
+                <!--used-->
+                <h3 class="healthpointsusedlabel label">Used</h3>
+                <input class="healthpointsusednum" name="attr_healthpointsusednum" type="number" value="0">
+                <!--remaining-->
+                <h3 class="healthpointsremaininglabel label">Remaining</h3>
+                <span class="healthpointsbasenum" name="attr_healthpointsbasebum"></span>
+            </div>
+            <!--Society Points-->
+            <div class="divsocietypoints">
+                <h2 class="societypointsheader">Society Points</h2>
+                <!--base-->
+                <h3 class="societypointsbaselabel label">Base</h3>
+                <span class="societypointsbasenum" name="attr_societypointsbasenum"></span>
+                <!--modifier-->
+                <h3 class="societypointsmodifierlabel label">Modifier</h3>
+                <input class="societypointsmodifiernum" name="attr_societypointsmodifiernum" type="number" value="0">
+                <!--total-->
+                <h3 class="societypointstotallabel label">Total</h3>
+                <span class="societypointsbasenum" name="attr_societypointsbasebum"></span>
+                <!--damage-->
+                <h3 class="societypointsdamagelabel label">Damage</h3>
+                <input class="societypointsdamagenum" name="attr_societypointsdamagenum" type="number" value="0">
+                <!--remaining-->
+                <h3 class="societypointsremaininglabel label">Remaining</h3>
+                <span class="societypointsbasenum" name="attr_societypointsbasebum"></span>
+            </div>
+        </div>
+        <!--Derived Stats Combat Values-->
+        <div class="divderivesstatscombat">
+            <!--Damage Multiplier-->
+            <div class="divdamagemultiplier">
+                <h2 class="damagemultiplierheader">Damage Multiplier</h2>
+                <!--Base-->
+                <h3 class="damagemultiplierbaselabel label">Base</h3>
+                <span class="damagemultiplierbasenum" name="attr_societypointsbasebum"></span>
+                <!--Modifier-->
+                <h3 class="damagemultipliermodifierlabel label">Modifier</h3>
+                <input class="damagemultipliermodfiernum" name="attr_damagemultipliermodifiernum">
+                <!--Total-->
+                <h3 class="damagemultipliertotallabel label">Total</h3>
+                <span class="damagemultipliertotalnum" name="attr_damagemultipliertotalnum"></span>
+            </div>
+            <!--Combat Attack Value-->
+            <div class="divcombatattackvalue">
+                <h2 class="combatattackvalueheader">Combat Value Attack</h2>
+                <!--Base-->
+                <h3 class="combatattackvaluebaselabel label">Base</h3>
+                <span class="combatattackvaluebasenum" name="attr_societypointsbasebum"></span>
+                <!--Modifier-->
+                <h3 class="combatattackvaluemodifierlabel label">Modifier</h3>
+                <input class="combatattackvaluemodfiernum" name="attr_combatattackvaluemodifiernum">
+                <!--Total-->
+                <h3 class="combatattackvaluetotallabel label">Total</h3>
+                <span class="combatattackvaluetotalnum" name="attr_combatattackvaluetotalnum"></span>
+            </div>
+            <!--Combat Defense Value-->
+            <div class="divcombatdefensevalue">
+                <h2 class="combatdefensevalueheader">Combat Value Defense</h2>
+                <!--Base-->
+                <h3 class="combatdefensevaluebaselabel label">Base</h3>
+                <span class="combatdefensevaluebasenum" name="attr_societypointsbasebum"></span>
+                <!--Modifier-->
+                <h3 class="combatdefensevaluemodifierlabel label">Modifier</h3>
+                <input class="combatdefensevaluemodfiernum" name="attr_combatdefensevaluemodifiernum">
+                <!--Total-->
+                <h3 class="combatdefensevaluetotallabel label">Total</h3>
+                <span class="combatdefensevaluetotalnum" name="attr_combatdefensevaluetotalnum"></span>
+            </div>
+            <!--Social Combat Value-->
+            <div class="divcombatsocialvalue">
+                <h2 class="combatsocialvalueheader">Combat Value Social</h2>
+                <!--Base-->
+                <h3 class="combatsocialvaluebaselabel label">Base</h3>
+                <span class="combatsocialvaluebasenum" name="attr_societypointsbasebum"></span>
+                <!--Modifier-->
+                <h3 class="combatsocialvaluemodifierlabel label">Modifier</h3>
+                <input class="combatsocialvaluemodfiernum" name="attr_combatsocialvaluemodifiernum">
+                <!--Total-->
+                <h3 class="combatsocialvaluetotallabel label">Total</h3>
+                <span class="combatsocialvaluetotalnum" name="attr_combatsocialvaluetotalnum"></span>
+            </div>
+        </div>
+        <!--Character Points-->
+        <div class="divcharacterpoints">
+            <h2 class="divcharacterpoints">Character Points</h2>
+            <!--Character Creation-->
+            <h3 class="charactercreationcharacterpointslabel label">Creation</h3>
+            <input class="charactercreationcharacterpointsnum" name="attr_charactercreationcharacterpointsnum">
+            <!--points gained-->
+            <h3 class="characterpointsgainedlabel label">Gained</h3>
+            <input class="characterpointsgainednum" name="attr_characterpointsgainednum">
+            <!--points used-->
+            <h3 class="characterpointsusedlabel label">Used</h3>
+            <input class="characterpointsusednum" name="attr_characterpointsusednum">
+            <!--points remaining-->
+            <h3 class="characterpointsremaininglabel label">Remaining</h3>
+            <span class="characterpointsremainingnum" name="attr_characterpointsremainingnum"></span>
+        </div>
     </div>
-
-    <!--Base Stats-->
-    <div class="base-stats">
-        <!--body-->
-        <div class="divbody">
-            <h2>Body</h2>
-            <!--base-->
-            <span class="bodybaselabel">Base</span>
-            <input class="bodybasenum" name="attr_bodybase" type="number" value="0">
-            <!--modifier-->
-            <span class="bodymodifierlabel">Modifier</span>
-            <input class="bodymodifiernum" name="attr_bodymodifier" type="number" value="0">
-            <!--total-->
-            <span class="bodytotallabel">Total</span>
-            <span class="bodytotalnum" name="attr_bodytotal" title="@{body}"></span>
-        </div>
-        <!--mind-->
-        <div class="divmind">
-            <h2>Mind</h2>
-            <!--base-->
-            <span class="mindbaselabel">Base</span>
-            <input class="mindbasenum" name="attr_mindbase" type="number" value="0">
-            <!--modifier-->
-            <span class="mindmodifierlabel">Modifier</span>
-            <input class="mindmodifiernum" name="attr_mindmodifier" type="number" value="0">
-            <!--total-->
-            <span class="mindtotallabel">Total</span>
-            <span class="mindtotalnum" name="attr_mindtotal" title="@{mind}"></span>
-        </div>
-        <!--soul-->
-        <div class="divsoul">
-            <h2>Soul</h2>
-            <!--base-->
-            <span class="soulbaselabel">Base</span>
-            <input class="soulbasenum" name="attr_soulbase" type="number" value="0">
-            <!--modifier-->
-            <span class="soulmodifierlabel">Modifier</span>
-            <input class="soulmodifiernum" name="attr_soulmodifier" type="number" value="0">
-            <!--total-->
-            <span class="soultotallabel">Total</span>
-            <span class="soultotalnum" name="attr_soultotal" title="@{soul}"></span>
-        </div>
-    </div>
-
-    <!--Derived Stats Points-->
-    <div class="divderivedstats">
-        <!--Energy Points-->
-        <div class="divenergypoints">
-            <h2>Energy Points</h2>
-            <!--base-->
-            <span class="energypointsbaselabel">Base</span>
-            <span class="energypointsbasenum" name="attr_energypointsbasenum"></span>
-            <!--modifier-->
-            <span class="energypointsmodifierlabel">Modifier</span>
-            <input class="energypointsmodifiernum" name="attr_energypointsmodifiernum" type="number" value="0">
-            <!--total-->
-            <span class="energypointstotallabel">Total</span>
-            <span class="energypointsbasenum" name="attr_energypointsbasebum"></span>
-            <!--damage-->
-            <span class="energypointsdamagelabel">Damage</span>
-            <input class="energypointsdamagenum" name="attr_energypointsdamagenum" type="number" value="0">
-            <!--used-->
-            <span class="energypointsusedlabel">Used</span>
-            <input class="energypointsusednum" name="attr_energypointsusednum" type="number" value="0">
-            <!--remaining-->
-            <span class="energypointsremaininglabel">Remaining</span>
-            <span class="energypointsbasenum" name="attr_energypointsbasebum"></span>
-        </div>
-        <!--Health Points-->
-        <div class="divhealthpoints">
-            <h2>Health Points</h2>
-            <!--base-->
-            <span class="healthpointsbaselabel">Base</span>
-            <span class="healthpointsbasenum" name="attr_healthpointsbasenum"></span>
-            <!--modifier-->
-            <span class="healthpointsmodifierlabel">Modifier</span>
-            <input class="healthpointsmodifiernum" name="attr_healthpointsmodifiernum" type="number" value="0">
-            <!--total-->
-            <span class="healthpointstotallabel">Total</span>
-            <span class="healthpointsbasenum" name="attr_healthpointsbasebum"></span>
-            <!--damage-->
-            <span class="healthpointsdamagelabel">Damage</span>
-            <input class="healthpointsdamagenum" name="attr_healthpointsdamagenum" type="number" value="0">
-            <!--used-->
-            <span class="healthpointsusedlabel">Used</span>
-            <input class="healthpointsusednum" name="attr_healthpointsusednum" type="number" value="0">
-            <!--remaining-->
-            <span class="healthpointsremaininglabel">Remaining</span>
-            <span class="healthpointsbasenum" name="attr_healthpointsbasebum"></span>
-        </div>
-        <!--Society Points-->
-        <div class="divsocietypoints">
-            <h2>Society Points</h2>
-            <!--base-->
-            <span class="societypointsbaselabel">Base</span>
-            <span class="societypointsbasenum" name="attr_societypointsbasenum"></span>
-            <!--modifier-->
-            <span class="societypointsmodifierlabel">Modifier</span>
-            <input class="societypointsmodifiernum" name="attr_societypointsmodifiernum" type="number" value="0">
-            <!--total-->
-            <span class="societypointstotallabel">Total</span>
-            <span class="societypointsbasenum" name="attr_societypointsbasebum"></span>
-            <!--damage-->
-            <span class="societypointsdamagelabel">Damage</span>
-            <input class="societypointsdamagenum" name="attr_societypointsdamagenum" type="number" value="0">
-            <!--remaining-->
-            <span class="societypointsremaininglabel">Remaining</span>
-            <span class="societypointsbasenum" name="attr_societypointsbasebum"></span>
-        </div>
-    </div>
-    <!--Derived Stats Combat Values-->
-
-    <!--Character Points-->
-
+    
     <!--||||||||||Attributes Tab||||||||||-->
-
+    <div class="sheet-attributes">
+        <input type="hidden" class="attribute-tabtoggle" name="attr_attributetab" value="attributegroup01"/>
+        <h1>Attributes</h1>
+        <div>
+            <button type="action" name="act_group01" class="attributegroupbutton01"></button>
+            <button type="action" name="act_group02" class="attributegroupbutton02"></button>
+            <button type="action" name="act_group03" class="attributegroupbutton03"></button>
+            <button type="action" name="act_group04" class="attributegroupbutton04"></button>
+            <button type="action" name="act_group05" class="attributegroupbutton05"></button>
+            <button type="action" name="act_group06" class="attributegroupbutton06"></button>
+            <button type="action" name="act_group07" class="attributegroupbutton07"></button>
+            <button type="action" name="act_group08" class="attributegroupbutton08"></button>
+            <button type="action" name="act_group09" class="attributegroupbutton09"></button>
+            <button type="action" name="act_group10" class="attributegroupbutton10"></button>
+        </div>
+    </div>
     <!--||||||||||Defects & Notes||||||||||-->
 
+    <div class="sheet-defects">
+        <h1>test defects</h1>
+    </div>
     <!--||||||||||Hidden Stuff||||||||||-->
-    <!--not used, just here for templating so no errors occur down in workers-->
+    <!--not used on sheet, just here for templating so no errors occur down in workers-->
     <input class="societypointsusednum" name="attr_societypointsusednum" type="hidden" value="0">
 </main>
 <!--||||||||||||||||-->
 <!--|||||Workers||||-->
 <!--||||||||||||||||-->
-<!--base stat workers-->
+<script type="text/worker">
+//<!--base stat workers-->
 
-<!--derived stat workers-->
+//<!--derived stat workers-->
 
-<!--derived stat combat workers-->
+//<!--derived stat combat workers-->
 
-<!--Tab Worker-->
-const buttonlist = ["stats", "attributes", "defects"];
-buttonlist.forEach(button => {
-    on(`clicked:${button}`, function() {
-        setAttrs({
-            sheetTab: button
+
+//<!--Tab Worker-->
+    const buttonlist = ["character", "attributes", "defects"];
+    buttonlist.forEach(button => {
+        on(`clicked:${button}`, function() {
+            setAttrs({
+                sheetTab: button
+            });
         });
     });
-});
+</script>
+<rolltemplate class="sheet-rolltemplate-BESM">
+
+</rolltemplate>
